@@ -16,12 +16,12 @@ public class Sofa : IFurniture
         _ID = id;
     }
 
-    public double GetPrice()
+    public virtual double GetPrice()
     {
         return _price;
     }
 
-    public string GetDescription()
+    public virtual string GetDescription()
     {
         return string.Format("This is {0}.", _name);
     }
