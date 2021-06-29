@@ -10,9 +10,13 @@ public class ModernSofa : Sofa
         //_ID = id;
     }
 
+    public override string GetDescription()
+    {
+        return string.Format("{0} with modern design.", base.GetDescription());
+    }
     public override double GetPrice()
     {
-        return _price;
+        return _price * 3;
     }
     public override void Sit()
     {

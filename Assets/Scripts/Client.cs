@@ -10,5 +10,6 @@ public class Client : MonoBehaviour
         FurnitureFactory factory = new ModernFurnitureFactory();
         Sofa sofa = factory.CreateProduct<Sofa>(FutnitureType.Sofa);
         sofa.Sit();
+        Debug.Log($"The price is {sofa.GetPrice():C}");
     }
 }

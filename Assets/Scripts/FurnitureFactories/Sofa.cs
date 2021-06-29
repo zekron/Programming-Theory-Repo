@@ -23,7 +23,7 @@ public class Sofa : IFurniture
 
     public virtual string GetDescription()
     {
-        return string.Format("This is {0}.", _name);
+        return string.Format("This is {0}", _name);
     }
 
     public virtual void Sit()

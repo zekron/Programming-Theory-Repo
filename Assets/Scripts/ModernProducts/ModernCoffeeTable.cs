@@ -9,4 +9,17 @@ public class ModernCoffeeTable : CoffeeTable
         //_name = name;
         //_ID = id;
     }
+
+    public override string GetDescription()
+    {
+        return string.Format("{0} with modern design.", base.GetDescription());
+    }
+    public override double GetPrice()
+    {
+        return _price * 2;
+    }
+    public override void Sit()
+    {
+        Debug.Log("It looks modern. It's better than normal one.");
+    }
 }
