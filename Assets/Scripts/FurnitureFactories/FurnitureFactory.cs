@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FurnitureFactory : MonoBehaviour
+public abstract class FurnitureFactory : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private string _name;
+    private int _ID;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string Name { get => _name; set => _name = value; }
+    public int Int { get => _ID; set => _ID = value; }
+
+    public abstract void CreateProduct(Product product);
+}
+
+public enum Product
+{
+    Sofa,
+    CoffeeTable,
+    Chair,
 }

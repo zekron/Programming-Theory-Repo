@@ -1,18 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ModernFactory : MonoBehaviour
+public class ModernFactory : FurnitureFactory
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void CreateProduct(Product product)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        switch (product)
+        {
+            case Product.Sofa:
+                break;
+            case Product.CoffeeTable:
+                break;
+            case Product.Chair:
+                break;
+            default:
+                Debug.Log("Product not found.");
+                break;
+        }
     }
 }
