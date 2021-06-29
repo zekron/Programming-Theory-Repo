@@ -2,17 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VictoriaCoffeeTable : MonoBehaviour
+public class VictorianCoffeeTable : CoffeeTable
 {
-    // Start is called before the first frame update
-    void Start()
+    public VictorianCoffeeTable(string name, string id) : base(name, id)
     {
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    public override string GetDescription()
     {
-        
+        return base.GetDescription();
+    }
+
+    public override double GetPrice()
+    {
+        return base.GetPrice() * 3.5;
+    }
+
+    public override void Sit()
+    {
+        base.Sit();
     }
 }

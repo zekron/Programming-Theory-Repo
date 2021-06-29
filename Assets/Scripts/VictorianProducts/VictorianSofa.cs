@@ -2,17 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VictoriaSofa : MonoBehaviour
+public class VictorianSofa : Sofa
 {
-    // Start is called before the first frame update
-    void Start()
+    public VictorianSofa(string name, string id) : base(name, id)
     {
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    public override string GetDescription()
     {
-        
+        return base.GetDescription();
+    }
+
+    public override double GetPrice()
+    {
+        return base.GetPrice() * 3;
+    }
+
+    public override void Sit()
+    {
+        base.Sit();
     }
 }

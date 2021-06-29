@@ -16,15 +16,15 @@ public class VictorianFurnitureFactory : FurnitureFactory
         switch (product)
         {
             case FutnitureType.Sofa:
-                furniture = new Sofa("Victorian Sofa", productID);
+                furniture = new VictorianSofa("Victorian Sofa", productID);
                 _sofaDictionary.Add(productID, furniture as Sofa);
                 break;
             case FutnitureType.CoffeeTable:
-                furniture = new CoffeeTable("Victorian Coffee Table", productID);
+                furniture = new VictorianCoffeeTable("Victorian Coffee Table", productID);
                 _coffeeTableDictionary.Add(productID, furniture as CoffeeTable);
                 break;
             case FutnitureType.Chair:
-                furniture = new Chair("Victorian Sofa", productID);
+                furniture = new VictorianChair("Victorian Sofa", productID);
                 _chairDictionary.Add(productID, furniture as Chair);
                 break;
             default:

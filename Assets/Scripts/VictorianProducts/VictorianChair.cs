@@ -2,17 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VictoriaChair : MonoBehaviour
+public class VictorianChair : Chair
 {
-    // Start is called before the first frame update
-    void Start()
+    public VictorianChair(string name, string id) : base(name, id)
     {
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    public override string GetDescription()
     {
-        
+        return base.GetDescription();
+    }
+
+    public override double GetPrice()
+    {
+        return base.GetPrice() * 4;
+    }
+
+    public override void Sit()
+    {
+        base.Sit();
     }
 }
