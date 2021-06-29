@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,8 +28,7 @@ public class ModernFurnitureFactory : FurnitureFactory
                 _chairDictionary.Add(furniture.ID, furniture as Chair);
                 break;
             default:
-                Debug.Log("Product type not found.");
-                break;
+                throw new System.Exception("Product type not found");
         }
         Debug.LogFormat("{0} created. Here's ID {1}", furniture.Name, furniture.ID);
         return furniture;
@@ -47,7 +45,7 @@ public class ModernFurnitureFactory : FurnitureFactory
             case FutnitureType.Chair:
                 return string.Format("F{1}P{0}{2:X}", ChairID, _factoryID, _chairDictionary.Count);
             default:
-                throw new Exception("Product type not found");
+                throw new System.Exception("Product type not found");
         }
     }
 }

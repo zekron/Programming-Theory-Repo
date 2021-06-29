@@ -28,8 +28,7 @@ public class VictorianFurnitureFactory : FurnitureFactory
                 _chairDictionary.Add(chair.ID, chair);
                 break;
             default:
-                Debug.Log("Product type not found.");
-                break;
+                throw new System.Exception("Product type not found");
         }
         Debug.LogFormat("{0} created. Here's ID {1}", furniture.Name, furniture.ID);
         return furniture;
