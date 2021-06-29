@@ -18,8 +18,8 @@ public class VictorianCoffeeTable : CoffeeTable
         return base.GetPrice() * 3.5;
     }
 
-    public override void Sit()
+    public override void HaveALook()
     {
-        base.Sit();
+        base.HaveALook();
     }
 }

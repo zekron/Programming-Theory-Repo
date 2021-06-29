@@ -23,7 +23,7 @@ public class CoffeeTable : IFurniture
         return string.Format("This is {0}.", _name);
     }
 
-    public virtual void Sit()
+    public virtual void HaveALook()
     {
         Debug.Log("Just so so.");
     }

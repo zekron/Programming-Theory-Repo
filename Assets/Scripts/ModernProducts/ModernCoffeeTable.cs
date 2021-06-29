@@ -18,7 +18,7 @@ public class ModernCoffeeTable : CoffeeTable
     {
         return _price * 2;
     }
-    public override void Sit()
+    public override void HaveALook()
     {
         Debug.Log("It looks modern. It's better than normal one.");
     }
