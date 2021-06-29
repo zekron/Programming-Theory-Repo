@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FurnitureFactory : MonoBehaviour
+public abstract class FurnitureFactory : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private const string _chairID = "0101";
+    private const string _coffeeTableID = "0102";
+    private const string _sofaID = "0103";
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    protected string ChairID { get => _chairID; }
+    protected string CoffeeTableID { get => _coffeeTableID; }
+    protected string SofaID { get => _sofaID; }
+
+    public abstract Furniture CreateProduct(FutnitureType product);
+    public abstract string GenerateProductID(FutnitureType product);
 }
