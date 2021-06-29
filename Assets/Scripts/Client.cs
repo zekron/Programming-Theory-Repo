@@ -8,6 +8,7 @@ public class Client : MonoBehaviour
     void Start()
     {
         FurnitureFactory factory = new ModernFurnitureFactory();
-        Furniture furniture = factory.CreateProduct(FutnitureType.Sofa);
+        Sofa sofa = factory.CreateProduct<Sofa>(FutnitureType.Sofa);
+        sofa.Sit();
     }
 }

@@ -9,29 +9,29 @@ public class VictorianFurnitureFactory : FurnitureFactory
     Dictionary<string, Chair> _chairDictionary = new Dictionary<string, Chair>();
 
     private const string _factoryID = "02";
-    public override Furniture CreateProduct(FutnitureType product)
+    public override T CreateProduct<T>(FutnitureType product)
     {
         string productID = GenerateProductID(product);
-        Furniture furniture = default;
+        IFurniture furniture = default;
         switch (product)
         {
             case FutnitureType.Sofa:
-                Sofa sofa = new Sofa("Victorian Sofa", productID);
-                _sofaDictionary.Add(sofa.ID, sofa);
+                furniture = new Sofa("Victorian Sofa", productID);
+                _sofaDictionary.Add(productID, furniture as Sofa);
                 break;
             case FutnitureType.CoffeeTable:
-                CoffeeTable coffeetable = new CoffeeTable("Victorian Coffee Table", productID);
-                _coffeeTableDictionary.Add(coffeetable.ID, coffeetable);
+                furniture = new CoffeeTable("Victorian Coffee Table", productID);
+                _coffeeTableDictionary.Add(productID, furniture as CoffeeTable);
                 break;
             case FutnitureType.Chair:
-                Chair chair = new Chair("Victorian Sofa", productID);
-                _chairDictionary.Add(chair.ID, chair);
+                furniture = new Chair("Victorian Sofa", productID);
+                _chairDictionary.Add(productID, furniture as Chair);
                 break;
             default:
                 throw new System.Exception("Product type not found");
         }
-        Debug.LogFormat("{0} created. Here's ID {1}", furniture.Name, furniture.ID);
-        return furniture;
+        Debug.LogFormat("{0} Here's ID {1}", furniture.GetDescription(), productID);
+        return (T)furniture;
     }
 
     public override string GenerateProductID(FutnitureType product)
