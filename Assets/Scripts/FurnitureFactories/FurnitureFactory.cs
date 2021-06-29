@@ -12,6 +12,6 @@ public abstract class FurnitureFactory : MonoBehaviour
     protected string CoffeeTableID { get => _coffeeTableID; }
     protected string SofaID { get => _sofaID; }
 
-    public abstract Furniture CreateProduct(FutnitureType product);
+    public abstract T CreateProduct<T>(FutnitureType product) where T : IFurniture;
     public abstract string GenerateProductID(FutnitureType product);
 }
