@@ -2,17 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sofa : MonoBehaviour
+public class Sofa : Furniture
 {
-    // Start is called before the first frame update
-    void Start()
+    public Sofa(string name, string id)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _name = name;
+        _ID = id;
     }
 }

@@ -2,17 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoffeeTable : MonoBehaviour
+public class CoffeeTable : Furniture
 {
-    // Start is called before the first frame update
-    void Start()
+    public CoffeeTable(string name, string id)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _name = name;
+        _ID = id;
     }
 }

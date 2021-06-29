@@ -4,18 +4,14 @@ using UnityEngine;
 
 public abstract class FurnitureFactory : MonoBehaviour
 {
-    private string _name;
-    private int _ID;
+    private const string _chairID = "0101";
+    private const string _coffeeTableID = "0102";
+    private const string _sofaID = "0103";
 
-    public string Name { get => _name; set => _name = value; }
-    public int Int { get => _ID; set => _ID = value; }
+    protected string ChairID { get => _chairID; }
+    protected string CoffeeTableID { get => _coffeeTableID; }
+    protected string SofaID { get => _sofaID; }
 
-    public abstract void CreateProduct(Product product);
-}
-
-public enum Product
-{
-    Sofa,
-    CoffeeTable,
-    Chair,
+    public abstract Furniture CreateProduct(FutnitureType product);
+    public abstract string GenerateProductID(FutnitureType product);
 }
