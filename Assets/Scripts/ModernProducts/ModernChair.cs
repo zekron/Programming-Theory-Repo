@@ -2,17 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ModernChair : MonoBehaviour
+public class ModernChair : Chair
 {
-    // Start is called before the first frame update
-    void Start()
+    public ModernChair(string name, string id) : base(name, id)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //_name = name;
+        //_ID = id;
     }
 }

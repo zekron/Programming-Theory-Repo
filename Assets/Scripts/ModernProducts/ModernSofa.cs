@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ModernSofa : MonoBehaviour
+public class ModernSofa : Sofa
 {
-    // Start is called before the first frame update
-    void Start()
+    public ModernSofa(string name, string id) : base(name, id)
     {
-        
+        //_name = name;
+        //_ID = id;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override double GetPrice()
     {
-        
+        return _price;
+    }
+    public override void Sit()
+    {
+        Debug.Log("It looks modern. It's better than normal one.");
     }
 }
