@@ -12,7 +12,7 @@ public class ModernCoffeeTable : CoffeeTable
 
     public override string GetDescription()
     {
-        return string.Format("{0} with modern design.", base.GetDescription());
+        return string.Format("{0} with modern design. It's a good choice for coffee shop.", base.GetDescription());
     }
     public override double GetPrice()
     {

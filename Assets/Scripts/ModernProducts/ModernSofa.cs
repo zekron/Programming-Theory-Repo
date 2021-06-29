@@ -12,7 +12,7 @@ public class ModernSofa : Sofa
 
     public override string GetDescription()
     {
-        return string.Format("{0} with modern design.", base.GetDescription());
+        return string.Format("{0} with modern design. It's so comfortable that anyone lays on it will fall asleep soon.", base.GetDescription());
     }
     public override double GetPrice()
     {

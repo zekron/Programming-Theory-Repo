@@ -12,7 +12,7 @@ public class ModernChair : Chair
 
     public override string GetDescription()
     {
-        return string.Format("{0} with modern design.", base.GetDescription());
+        return string.Format("{0} with modern design. We suggest you package it with modern coffee table.", base.GetDescription());
     }
     public override double GetPrice()
     {
