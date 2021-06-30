@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class FurnitureFactory : MonoBehaviour
+public abstract class FurnitureFactory
 {
     private const string _chairID = "0101";
     private const string _coffeeTableID = "0102";
